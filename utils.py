@@ -16,7 +16,7 @@ Movies = [
 
 def recommend_movies(user_ratings, num_recommendations=5):
     rating_matrix = pd.read_csv(
-        "./rating_matrix.csv",
+        "./ratings_matrix.csv",
     )
     active_user_ratings = pd.Series(0, index=rating_matrix.columns)
     for movie, rating in user_ratings.items():
